@@ -6,9 +6,15 @@ Your audio never leaves your Mac.
 
 ```bash
 brew tap tharuns123/halo
+brew trust tharuns123/halo
 brew install halo
 halo setup
 ```
+
+Homebrew 7 will not load a formula from a third-party tap until you trust it,
+so `brew trust` is required — without it `brew install` stops with "Refusing to
+load formula ... from untrusted tap". The build instructions it is asking you
+to vouch for are in [Formula/halo.rb](Formula/halo.rb).
 
 Requires an Apple Silicon Mac on macOS 14 or newer.
 
