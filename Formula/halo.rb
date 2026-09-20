@@ -13,8 +13,8 @@
 class Halo < Formula
   desc "Local push-to-talk dictation for macOS"
   homepage "https://github.com/tharunS123/Halo"
-  url "https://github.com/tharunS123/Halo/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "03da1ad4da3de85a69a7270acd5f796c1cb763f24dff8caa5dd972496f3b695f"
+  url "https://github.com/tharunS123/Halo/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "8dbbc9b531ba7cc2ba299149f5526094137b36419d287ede121ffb18a76afc57"
   license "MIT"
   head "https://github.com/tharunS123/Halo.git", branch: "main"
 
@@ -51,6 +51,7 @@ class Halo < Formula
     (app/"Contents/MacOS").mkpath
     (app/"Contents/Resources").mkpath
     cp buildpath/"swift-build/release/HaloOverlay", app/"Contents/MacOS/Halo"
+    cp buildpath/"overlay/Halo.icns", app/"Contents/Resources/Halo.icns"
     (app/"Contents/Info.plist").write (buildpath/"overlay/Info.plist.in").read
                                                                         .gsub("__VERSION__", version.to_s)
     system "strip", "-S", app/"Contents/MacOS/Halo"   # before signing, not after
