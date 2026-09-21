@@ -13,8 +13,8 @@
 class Halo < Formula
   desc "Local push-to-talk dictation for macOS"
   homepage "https://github.com/tharunS123/Halo"
-  url "https://github.com/tharunS123/Halo/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "199d390df6466074540a63a89342b4cecbb5e19951c47387879ab7cd92eae732"
+  url "https://github.com/tharunS123/Halo/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "09099e5ef9bccdbaccd6e220de390088a57053645c422700c3b45adc1e7c2567"
   license "MIT"
   head "https://github.com/tharunS123/Halo.git", branch: "main"
 
